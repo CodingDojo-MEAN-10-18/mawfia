@@ -1,0 +1,12 @@
+h1{
+    color: blue;
+    text-align: center;
+}
+
+#cars{
+    width: 600px;
+    margin-left: 25%;
+}
+img{
+    width: 50%;
+}
