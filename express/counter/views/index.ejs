@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Counter Assignment</title>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <style>
+            *{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Counter Assignment</h1>
+        <h2><%= counter %> times.</h2>
+        <form action="/" method="POST"><input type="submit" value="+2"></form>
+        <form action="/reset" method="GET"><input type="submit" value="Reset"></form>
+    </body>
+</html>
