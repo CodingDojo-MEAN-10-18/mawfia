@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Form Results</title>
+      <link rel="stylesheet" type="text/css" href="css/results.css">
+   </head>
+   <body>
+       <h4>Thanks for submitting this form.</h4>
+       <table>
+           <tbody>
+            <% for(var r in result)
+            { %>
+                <tr>
+                    <td><%= r %>:</td>
+                    <td><%= result[r] %></td>
+                </tr>
+            <% } %>
+           </tbody>
+       </table>
+       <a href="/">Go Back</a>
+   </body>
+</html>
