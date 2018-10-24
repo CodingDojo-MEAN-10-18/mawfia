@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title><%= cat.name %>'s Details Page</title>
+        <link rel="stylesheet" type="text/css" href="css/cats.css">
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1>Details Page for <%= cat.name %></h1>
+        <a href="/">Home</a>
+        <img src="images/<%= cat.picture %>">
+        <div id="cats">
+            <h3>Favorite Food: <%= cat.food %></h3>
+            <h3>Age: <%= cat.age %> </h3>
+            <h3>Sleeping spots:</h3>
+            <% for(var spot of cat.sleep) { %> <h4><%= spot %></h4> <% } %>
+        </div>
+    </body>
+</html>
