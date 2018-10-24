@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Cats Page</title>
+        <link rel="stylesheet" type="text/css" href="css/cats.css">
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1>Some Cool Cats!</h1>
+        <a href="/">Home</a>
+        <a href="/cars">Cars</a>
+        <a href="/cars/new">New Car Form</a>
+        <div id="cats">
+        <% for (var cat of cats) { %><img src="images/<%= cat %>"><% } %>
+        </div>
+    </body>
+</html>
