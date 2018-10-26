@@ -1,5 +1,4 @@
 const express = require("express");
-//var session = require('express-session');
 const bodyParser = require('body-parser');
 const axios = require('axios');
 const app = express();
@@ -9,14 +8,12 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + "/static"));
-//app.use(session({secret: 'abdcefghi', resave: true, saveUninitialized: true}));
 
 app.get('/', (request, response) => {
     response.render('index');
 })
 
 app.post('/result', (request, response) => {
-    //console.log(request.body);
     response.render('result', {result: request.body});
 })
 
