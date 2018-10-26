@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Survey Form Revisited</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="js/index.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+   </head>
+   <body>
+       <div id="updated_message" hidden></div>
+       <div>
+           <h1>Submission Form</h1>
+           <form>
+               <label>You Name:</label><input type='text' name='Name'>
+               <label>Dojo Location:</label><input list="browsers" name="Location">
+                <datalist id="browsers">
+                    <option value="New York">
+                    <option value="Chicago">
+                    <option value="Miami">
+                    <option value="Austin">
+                    <option value="San Francisco">
+                    <option value="District of Columbia">
+                </datalist>
+                <label>Favorite Language:</label><input list="browsers2" name="Language">
+                 <datalist id="browsers2">
+                     <option value="Python">
+                     <option value="Java">
+                     <option value="JavaScript">
+                     <option value="C#">
+                     <option value="Angular">
+                     <option value="ReactJS">
+                 </datalist>
+                 <label>Comment (optional):</label>
+               <textarea name="Comment"></textarea>
+               <input type='submit' value='submit' id="submit">
+           </form>
+       </div>
+   </body>
+</html>
