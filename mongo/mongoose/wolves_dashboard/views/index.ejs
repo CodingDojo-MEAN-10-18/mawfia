@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Wolves Dashboard Assignment</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="js/index.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+   </head>
+   <body>
+       <div>
+           <h1>Wolves Dashboard</h1>
+           <a href="/wolf/new">Add Wolf</a>
+           <% if(wolves.length > 0) { %>
+               <table>
+                   <thead><tr><td>Name:</td><td>Age:</td><td>Weight:</td><td colspan="2">Action:</td></tr></thead>
+                   <tbody>
+                       <% for( let wolf of wolves ) { %>
+                           <tr><td><a href="/wolf/<%= wolf._id %>"><%= wolf.name %></a></td><td><%= wolf.age %></td><td><%= wolf.weight %></td>
+                               <td><a href="/wolf/edit/<%= wolf._id %>">Edit</a></td><td><a href="/wolf/destroy/<%= wolf._id %>">Delete</a></td></tr>
+                       <% } %>
+                  </tbody></table>
+           <% }
+           else { %> <h2>No Wolves in Pack.</h2> <% } %>
+           <% if(messages.errors) { %>
+               <% for (var error of messages.errors) { %>
+                   <h3 class="error"><%= error %></h3>
+               <% } %>
+           <% } %>
+   </body>
+</html>

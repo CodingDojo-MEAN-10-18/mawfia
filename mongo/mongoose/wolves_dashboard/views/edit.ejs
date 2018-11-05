@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Edit <%= wolf.name %></title>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/edit.css">
+   </head>
+   <body>
+          <h1>Edit <%= wolf.name %></h1>
+          <a href="/wolves">Wolves Home</a>
+           <form action="/wolf/<%= wolf._id %>" method="POST">
+               <label for="name">Name:</label><input type="text" name="name" value="<%= wolf.name %>">
+               <label for="age">Age:</label><input type="number" name="age" value="<%= wolf.age %>">
+               <label for="weight">Weight:</label><input type="number" name="weight" value="<%= wolf.weight %>">
+               <input type="submit" value="Submit">
+           </form>
+           <% if(messages.errors) { %>
+               <% for (var error of messages.errors) { %>
+                   <h3 class="error"><%= error %></h3>
+               <% } %>
+           <% } %>
+   </body>
+</html>

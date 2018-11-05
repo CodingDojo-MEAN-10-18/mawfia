@@ -1,0 +1,35 @@
+h1, h2{
+    text-align: center;
+}
+
+a[href='/wolf/new']{
+    text-align: center;
+    display: block;
+    margin: 15px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+}
+
+thead td{
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.error{
+    color: red;
+    text-align: center;
+}

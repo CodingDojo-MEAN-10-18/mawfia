@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title><%= wolf.name %>'s Profile Pate</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/wolf.css">
+   </head>
+   <body>
+          <h1><%= wolf.name %> the Wolf</h1>
+          <a href="/wolves">Wolves Home</a>
+          <table>
+              <tbody>
+                  <tr><td>Name:</td><td><%= wolf.name %></td></tr>
+                  <tr><td>Age:</td><td><%= wolf.age %></td></tr>
+                  <tr><td>Weight:</td><td><%= wolf.weight %></td></tr>
+              </tbody>
+          </table>
+   </body>
+</html>

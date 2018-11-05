@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+}
+
+a{
+    text-align: center;
+    display: block;
+    margin: 15px;
+}
+
+form{
+    margin: auto;
+    width: 300px;
+}
+
+label{
+    width: 100px;
+    display: inline-block;
+}
+
+input[name]{
+    width: 150px;
+}
+
+input[type=submit]{
+    display: block;
+    margin: auto;
+}
+
+.error{
+    color: red;
+    text-align: center;
+}
