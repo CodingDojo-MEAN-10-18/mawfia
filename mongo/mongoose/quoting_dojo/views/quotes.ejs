@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>The Quotes</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="js/quotes.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/quotes.css">
+   </head>
+   <body>
+       <div>
+           <h1>Here are the Awesome Quotes!</h1>
+           <% if(users) { %>
+               <% for(let user of users.sort( (a, b) => a.createdAt < b.createdAt ) ) { %>
+                   <q><%= user.quote %></q>
+                   <p>-<%= user.name %> at <%= moment(user.createdAt).format('h:mm a MMMM D gggg') %></p>
+               <% } %>
+           <% } %>
+       </div>
+   </body>
+</html>

@@ -1,0 +1,15 @@
+div{
+    margin: auto;
+    width: 55%;
+    border: 3px solid blue;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+h1, p{
+    text-align: center;
+}
+
+p{
+    color: blue;
+}

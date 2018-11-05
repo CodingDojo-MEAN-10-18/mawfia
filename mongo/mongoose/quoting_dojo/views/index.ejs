@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Quoting Dojo</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="js/index.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+   </head>
+   <body>
+       <div>
+           <h1>Welcome to Quoting Dojo</h1>
+           <form action="/quotes" method="POST">
+               <label>Your name:</label><input type="text" name="name"></input>
+               <label>Your quote:</label><input type="text" name="quote"></input>
+               <input type="submit" value="Add my quote!"><a href="/quotes" class="button">Skip to quotes!</a>
+           </form>
+       </div>
+           <% if(messages.test) { %>
+               <% for (var x of messages.test) { %>
+                   <h3><%= x %></h3>
+               <% } %>
+           <% } %>
+   </body>
+</html>

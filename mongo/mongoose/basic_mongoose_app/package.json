@@ -1,0 +1,25 @@
+{
+  "name": "basic_mongoose_app",
+  "version": "1.0.0",
+  "description": "first mongoose application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "mongoose",
+    "express",
+    "node"
+  ],
+  "author": "Michael Andrew Williams",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.3.9",
+    "socket.io": "^2.1.1"
+  }
+}

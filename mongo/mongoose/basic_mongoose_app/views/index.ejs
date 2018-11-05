@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Basic Mongoose App</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="js/index.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+   </head>
+   <body>
+       <h1>Welcome to the Basic Mongoose App</h1>
+       <form action="/users" method="POST">
+           <label>Name:</label><input type="text" name="name"></input>
+           <label>Age:</label><input type="text" name="age"></input>
+           <input type="submit" value="Submit"></input>
+       </form>
+       <% if(users.length > 0) { %>
+           <hr>
+           <table>
+               <thead><tr><td>Name:</td><td>Age:</td></tr></thead>
+               <tbody>
+                   <% for (var user in users) { %> <tr><td><%= users[user].name %></td><td><%= users[user].age %></td></tr> <% } %>
+                </tbody>
+            </table>
+        <% } %>
+   </body>
+</html>
