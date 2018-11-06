@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Wolves Dashboard Assignment</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/new.css">
+   </head>
+   <body>
+          <h1>Add a Wolf</h1>
+          <a href="/wolves">Wolves Home</a>
+           <form action="/wolf/new" method="POST">
+               <label for="name">Name:</label><input type="text" name="name">
+               <label for="age">Age:</label><input type="number" name="age">
+               <label for="weight">Weight:</label><input type="number" name="weight">
+               <input type="submit" value="Submit">
+           </form>
+           <% if(messages.errors) { %>
+               <% for (var error of messages.errors) { %>
+                   <h3 class="error"><%= error %></h3>
+               <% } %>
+           <% } %>
+   </body>
+</html>
