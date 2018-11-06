@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+}
+
+#login, #registration{
+    margin: auto;
+    width: 33%;
+}
+
+label{
+    width: 150px;
+    display: inline-block;
+}
+
+input[name]{
+    width: 150px;
+}
+
+#select{
+    text-align: center;
+    padding: 10px;
+}
+
+input[type=submit]{
+    display: block;
+    margin: 10px auto;
+}
+
+.error{
+    color: red;
+    text-align: center;
+}
