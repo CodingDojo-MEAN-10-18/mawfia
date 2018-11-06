@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Profile Page</title>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/profile.css">
+   </head>
+   <body>
+          <h1><%= user.first_name %>'s Profile Page</h1>
+          <div id="nav"><a href="/logout">Logout</a><a href="/secrets">Secrets</a></div>
+          <table>
+              <tbody>
+                  <tr><td>First Name:</td><td><%= user.first_name %></td></tr>
+                  <tr><td>Last Name:</td><td><%= user.last_name %></td></tr>
+                  <tr><td>Email:</td><td><%= user.email %></td></tr>
+                  <tr><td>Birthday:</td><td><%= moment(user.birthday).format('YYYY-MM-DD') %></td></tr>
+                  <tr><td>Member Since:</td><td><%= moment(user.createdAt).format('YYYY-MM-DD') %></td></tr>
+                  <tr><td>Last Login:</td><td><%= moment(user.updatedAt).format('YYYY-MM-DD') %></td></tr>
+              </tbody>
+          </table>
+   </body>
+</html>
