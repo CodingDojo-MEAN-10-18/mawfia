@@ -6,4 +6,5 @@ node/
 mongo/mongo_commands.docx
 angular/first-angular-app/node-modules
 angular/dojo-mail/node-modules
+angular/retro-barcode-generator/node-modules
 jquery-3.3.1.min.js
