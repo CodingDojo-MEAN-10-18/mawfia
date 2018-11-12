@@ -1,0 +1,21 @@
+div{
+    margin: auto;
+    width: fit-content;
+}
+
+span{
+    width: fit-content;
+    padding: 10px;
+    margin-right: 35px;
+    display: inline-block;
+    outline: solid black 1px;
+    box-shadow: 5px 5px;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.highlight{
+    background-color: yellow;
+}

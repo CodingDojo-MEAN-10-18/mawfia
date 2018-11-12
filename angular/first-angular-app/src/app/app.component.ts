@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MEAN';
+  
+  onButtonClick(data) { 
+    console.log(`Click event is working, ${data}`);
+}
 }

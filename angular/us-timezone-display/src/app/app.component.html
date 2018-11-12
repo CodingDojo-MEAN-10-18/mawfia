@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>US Time Zone Display</h1>
+  <span class="zone" [ngClass]="{ 'highlight': zone===-2 }" (click)="onButtonClick('-2')">PST</span>
+  <span class="zone" [ngClass]="{ 'highlight': zone===-1 }" (click)="onButtonClick('-1')">MST</span>
+  <span class="zone" [ngClass]="{ 'highlight': zone===0 }" (click)="onButtonClick('0')">CST</span>
+  <span class="zone" [ngClass]="{ 'highlight': zone===2 }" (click)="onButtonClick('2')">EST</span>
+  <span class="zone" (click)="onButtonClick()">Clear</span>
+  <h2>{{date | date:'medium'}}</h2>
+</div>
