@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>Switchboard</h1>
+  <div class="out" *ngFor="let switch of switches; let idx = index">
+      <span class="in" (click)="onButtonClick([idx])" [ngClass]="{ 'green' : switch }">
+          <p *ngIf="!switch">OFF</p><p *ngIf="switch">ON</p>
+      </span>
+  </div>
+</div>
