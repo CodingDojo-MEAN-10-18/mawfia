@@ -4,10 +4,10 @@ js_oop/
 js_advanced/
 node/
 mongo/mongo_commands.docx
-angular/first-angular-app/node-modules
-angular/dojo-mail/node-modules
-angular/retro-barcode-generator/node-modules
-angular/us-timezone-display/node-modules
-angular/switchboard/node-modules
-angular/registration/node-modules
+angular/component/first-angular-app/node-modules
+angular/component/dojo-mail/node-modules
+angular/component/retro-barcode-generator/node-modules
+angular/component/us-timezone-display/node-modules
+angular/component/switchboard/node-modules
+angular/component/registration/node-modules
 jquery-3.3.1.min.js
