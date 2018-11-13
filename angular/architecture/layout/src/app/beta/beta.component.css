@@ -1,0 +1,11 @@
+div{
+	outline: black solid 1px;
+	height: 400px;
+	width: 40%;
+	display: inline-block;
+	margin-left: 14%;
+}
+
+h1{
+	color: red;
+}

@@ -1,0 +1,12 @@
+div{
+	outline: black solid 1px;
+	height: 400px;
+	width: 40%;
+	margin: 20px 0px 0px 3%;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+h1{
+	color: blue;
+}
