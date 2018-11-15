@@ -11,4 +11,5 @@ angular/component/us-timezone-display/node-modules
 angular/component/switchboard/node-modules
 angular/component/registration/node-modules
 angular/architecture/layout/node-modules
+angular/architecture/power-levels/node-modules
 jquery-3.3.1.min.js

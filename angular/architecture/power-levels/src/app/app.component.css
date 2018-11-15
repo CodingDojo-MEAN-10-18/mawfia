@@ -1,0 +1,11 @@
+form{
+	margin-bottom: 150px;
+}
+
+.card{
+	width: 32%;
+	height: 150px;
+	display: inline-block;
+	margin: 0px 10px 0px 10px;
+	vertical-align: top;
+}
