@@ -1,0 +1,28 @@
+<div>
+	<h1>Add a Quote</h1>
+	<form #formData='ngForm' (submit)="onSubmit()" novalidate>
+		<textarea 
+			name="message"
+			required
+			maxlength="200"
+			[(ngModel)]="quote.message"
+			#message="ngModel">
+		</textarea>
+		<label>Author:</label>
+		 <input
+			type="text"
+			name="author"
+			minlength="1"
+			maxlength="25"
+			required
+			[(ngModel)]="quote.author"
+			#author="ngModel"
+		/>
+		<button [disabled]="message.errors || author.errors">Add Quote</button>
+	</form>
+</div>
+<div>
+	<p *ngIf="(message.errors && message.dirty) || (message.dirty && quote.message.length < 4)" class="error">Quote must contain at least 4 characters.</p>
+	<p *ngIf="author.errors && author.dirty" class="error">Author is required.</p>
+</div>
+<app-quote-list (aTaskEventEmitter)="dataFromChild($event)" [quotes]="quotes" *ngIf="quotes.length > 0"></app-quote-list>
