@@ -15,4 +15,5 @@ angular/architecture/power-levels/node-modules
 angular/architecture/quote-ranks/node-modules
 angular/services/numbers-with-service/node-modules
 angular/services/NinjaGold-with-service/node-modules
+angular/services/GitHub-Score/node-modules
 jquery-3.3.1.min.js
