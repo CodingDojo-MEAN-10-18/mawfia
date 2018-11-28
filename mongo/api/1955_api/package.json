@@ -1,0 +1,25 @@
+{
+  "name": "1955_api",
+  "version": "1.0.0",
+  "description": "mongoose api application",
+  "main": "server.js",
+  "scripts": {
+    "test": "\u001b"
+  },
+  "keywords": [
+    "mongoose",
+    "express",
+    "api"
+  ],
+  "author": "MICHAEL ANDREW WILLIAMS",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
+    "flash": "^1.1.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.3.14"
+  }
+}
