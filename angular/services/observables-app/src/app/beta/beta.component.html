@@ -1,0 +1,9 @@
+<h2>Task List</h2>
+<table>
+	<thead><tr><th>Title</th><th>Description</th><th>Completed</th></tr></thead>
+	<tbody>
+		<tr *ngFor="let task of tasks" (click)="getTask(task)"><td>{{ task.title }}</td><td>{{ task.description }}</td><td>{{ task.completed }}</td></tr>
+	</tbody>
+</table>
+
+<app-omega [task]="task" ></app-omega>

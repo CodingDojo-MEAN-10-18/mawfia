@@ -1,0 +1,65 @@
+<div *ngIf="task">
+<h2>Task Details</h2>
+  <table *ngIf="edit != task._id">
+	<tbody>
+		<tr>
+			<td>Title:</td>
+			<td>{{ task.title }}</td>
+			<td><button (click)="editTask(task)">Edit</button></td>
+			<td><button (click)="deleteTask(task)">Delete</button></td>
+		</tr>
+		<tr>
+			<td>Description:</td>
+			<td>{{ task.description }}</td>
+		</tr>
+		<tr>
+			<td>Completed:</td>
+			<td>{{ task.completed }}</td>
+		</tr>
+	</tbody>
+  </table>
+  <form *ngIf="edit==task._id">
+	  <table>
+		<tbody>
+			<tr>
+				<td>Title:</td>
+				<td>
+					<input
+						type="text"
+						name="title"
+						required
+						value="{{ task.title }}"
+						[(ngModel)]="task.title"
+					/> 
+				</td>
+				<td><button (click)="updateTask()">Update</button></td>
+				<td><button (click)="cancelEdit(task)">Cancel</button></td>
+			</tr>
+			<tr>
+				<td>Description:</td>
+				<td>
+					<input
+						type="text"
+						name="description"
+						required
+						value="{{ task.description }}"
+						[(ngModel)]="task.description"
+					/> 
+				</td>
+			</tr>
+			<tr>
+				<td>Completed:</td>
+				<td>
+					<input
+						type="checkbox"
+						name="completed"
+						checked
+						[(ngModel)]="task.completed"
+						value="task.completed"
+					/><span>{{ task.completed }}</span>
+				</td>
+			</tr>
+		</tbody>
+	  </table>
+  </form>
+</div>
