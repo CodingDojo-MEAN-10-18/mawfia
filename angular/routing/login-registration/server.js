@@ -87,9 +87,9 @@ app.post('/register', (request, response) => {
 
     user.save( err => {
         if(err) {
-			//let errors = {};
-            //for(let error in err.errors) errors[error] = (err.errors[error].message);
-			const errors = Object.key(err.errors).map( key => err.errors[key].message );
+			let errors = {};
+            for(let error in err.errors) errors[error] = (err.errors[error].message);
+			//const errors = Object.key(err.errors).map( key => err.errors[key].message );
             return response.json({message: 'Error', errors: errors});
         }
         else {

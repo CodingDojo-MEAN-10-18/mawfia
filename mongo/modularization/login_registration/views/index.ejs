@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Login and Registration Assignment</title>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="js/index.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/index.css">
+   </head>
+   <body>
+          <h1>Welcome to the Login and Registration Page</h1>
+          <div id="select"><button type="button" hidden>Login Form</button><button type="button">Registration Form</button></div>
+          <form id="login" action="/login" method="POST">
+              <label>Email:</label><input type="text" name="email" placeholder="Username">
+              <label>Password:</label><input type="password" name="password">
+              <input type="submit" value="Login">
+          </form>
+          <form id="registration" action="/register" method="POST" hidden>
+              <label>First Name:</label><input type="text" name="first_name" value="<%= user.first_name %>">
+              <label>Last Name:</label><input type="text" name="last_name" value="<%= user.last_name %>">
+              <label>Email:</label><input type="text" name="email" placeholder="Username" value="<%= user.email %>">
+              <label>Birthday:</label><input type="date" name="birthday" value="<%= moment(user.birthday).format('YYYY-MM-DD') %>">
+              <label>Password:</label><input type="password" name="password">
+              <label>Confirm Password:</label><input type="password" name="cpassword">
+              <input type="submit" value="Register">
+          </form>
+          <% if(messages.errors) { %><% for (let error of messages.errors) { %><h3 class="error"><%= error %></h3><% } %><% } %>
+          <span hidden><%= form %></span>
+   </body>
+</html>

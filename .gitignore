@@ -5,6 +5,12 @@ js_advanced/
 node/
 mongo/mongo_commands.docx
 mongo/mongoose/wolves_dashboard/node-modules
+mongo/mongoose/message_board/node-modules
+mongo/mongoose/quoting_dojo/node-modules
+mongo/mongoose/basic_mongoose_app/node-modules
+mongo/modularization/wolves_dashboard/node-modules
+mongo/modularization/dojo_secrets/node-modules
+mongo/modularization/login_registration/node-modules
 mongo/api/restful_task_api/node-modules
 angular/component/first-angular-app/node-modules
 angular/component/dojo-mail/node-modules
@@ -21,7 +27,7 @@ angular/services/GitHub-Score/node-modules
 angular/services/observables-app/node_modules
 angular/routing/Dojo-Weather-Forecast/node-modules
 angular/routing/Project-Product-Management/node-modules
-angular/routing/Login-Registration/node-modules
+angular/routing/login-registration/node-modules
 angular/"fetch data"/Resftul-Tasks/node-modules
 angular/"fetch data"/Pokemon-API/node-modules
 angular/"fetch data"/Books-API/node-modules

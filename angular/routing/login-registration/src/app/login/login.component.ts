@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
-import { of, Observable, from, BehaviorSubject, Observer } 'rxjs';
+import { of, Observable, from, BehaviorSubject, Observer } from 'rxjs';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthenticationService } from "../authentication.service";
 
@@ -22,15 +22,19 @@ export class LoginComponent implements OnInit {
   }
   
   login(guest: User): void{
-	let observable: Observable = this._authenticationService.loginUser(this.guest);
+	let observable: Observable<User> = this._authenticationService.loginUser(this.guest);
 
 	this._authenticationService.userObservers.subscribe(
-		(user: User) => { 
-			if(user) { this.user = user; this._router.navigate(['/dashboard']); }
+		(user) => {
+
+			
+		
+			if(user._id) { this.user = user; this._router.navigate(['/dashboard']);  return; }
 			else {
-				observable.subscribe( success => { this.error = success['error']; } );
-			}
-		} 
+				console.log("no user returned");
+				observable.subscribe( success => { this.error = success['error'];  } );
+			}			
+		}
 	)
 	this.guest = new User();
 	  //this._router.navigateByUrl(['/']);

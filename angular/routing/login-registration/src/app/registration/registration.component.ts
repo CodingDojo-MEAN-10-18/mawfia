@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import * as $ from "../../jquery-3.3.1.min.js";
-import { of, Observable, from, BehaviorSubject, Observer } 'rxjs';
+import { of, Observable, from, BehaviorSubject, Observer } from 'rxjs';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthenticationService } from "../authentication.service";
 
@@ -52,7 +52,7 @@ export class RegistrationComponent implements OnInit {
 	this._authenticationService.loginUser(this.guest);
 
 	this._authenticationService.userObservers.subscribe(
-		(user: User) => { this.user = user; this._router.navigate(['/dashboard']); }
+		(user: any) => { this.user = user; this._router.navigate(['/dashboard']); }
 	)
   }
   

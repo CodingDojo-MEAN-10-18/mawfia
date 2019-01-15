@@ -16,7 +16,7 @@ export class NavigationBarComponent implements OnInit {
 
   ngOnInit() {
 	  this.loggedIn = this._authenticationService.isAuthenticated();
-	  this._route.url.subscribe( success => 
+	  this._route.url.subscribe( success => {
 		
 		  if(success.length > 0){
 				if(success[0].path == "login") this.navButtons = [false, true]; //[login, register]
@@ -25,7 +25,7 @@ export class NavigationBarComponent implements OnInit {
 		  }
 		  else this.navButtons = [false, true];
 	  
-	  )
+	  })
   }
 
   logout(){	  
